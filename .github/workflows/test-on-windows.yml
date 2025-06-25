@@ -39,7 +39,7 @@ jobs:
       shell: bash
       run: |
         env
-	find $ANDROID_HOME
+        find $ANDROID_HOME
         echo "y" | "$ANDROID_HOME\\cmdline-tools\\latest\\bin\\sdkmanager" "system-images;android-35;google_apis;x86_64"
         echo "no" | "$ANDROID_HOME\\cmdline-tools\\latest\\bin\\avdmanager" create avd -n test_avd -k "system-images;android-35;google_apis;x86_64" --device "pixel" --force
 
